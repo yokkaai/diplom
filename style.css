@@ -1,0 +1,130 @@
+@import './css/header.css';
+@import './css/golovna.css';
+@import './css/footer.css';
+@import './css/about_us.css';
+@import './css/info.css';
+
+
+
+.textprod{
+    font-family: 'PT Sans Narrow';
+}
+
+
+
+/* кнопка прокрутки */
+
+
+ #scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: none; /* Ховаємо кнопку на початку */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Адаптація для маленьких екранів */
+@media (max-width: 768px) {
+    #scrollTopBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+
+
+
+/* стилі для кошика */
+
+
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+
+  .cart-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+
+
+  /* модальне кошика */
+  .modal-open {
+    overflow: hidden; /* Блокуємо прокручування сторінки */
+  }
+  
+  .modal-backdrop {
+    z-index: 1040; /* Залишаємо backdrop поверх всіх елементів */
+  }
+  
+
+  /* стилі модалки */
+  <style>
+  /* Задаємо шрифт для всього модального вікна */
+  #cartModal {
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  /* Колір заголовку модалки */
+  .modal-title {
+    color: #C90E0E;
+  }
+
+  /* Колір для тексту і кнопок у модальному вікні */
+  .modal-body,
+  .modal-footer {
+    color: #333;
+  }
+
+  /* Кнопка закриття з новим кольором */
+  .btn-close {
+    background-color: #C90E0E;
+  }
+
+  /* Кнопка "Оформити замовлення" */
+  .btn-success {
+    background-color: #C90E0E;
+    border-color: #C90E0E;
+  }
+
+  .btn-success:hover {
+    background-color: #A60707;
+    border-color: #A60707;
+  }
+
