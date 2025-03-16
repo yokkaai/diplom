@@ -3,6 +3,8 @@
 @import './css/footer.css';
 @import './css/about_us.css';
 @import './css/info.css';
+@import './css/media.css';
+@import './css/cart.css';
 
 
 
@@ -40,91 +42,4 @@
     }
 }
 
-
-
-
-/* стилі для кошика */
-
-
-
-.cart-icon {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  #cart-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: red;
-    color: white;
-    font-size: 14px;
-    padding: 5px;
-    border-radius: 50%;
-  }
-
-
-  .cart-icon {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  #cart-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: red;
-    color: white;
-    font-size: 14px;
-    padding: 5px;
-    border-radius: 50%;
-  }
-  
-
-
-  /* модальне кошика */
-  .modal-open {
-    overflow: hidden; /* Блокуємо прокручування сторінки */
-  }
-  
-  .modal-backdrop {
-    z-index: 1040; /* Залишаємо backdrop поверх всіх елементів */
-  }
-  
-
-  /* стилі модалки */
-  <style>
-  /* Задаємо шрифт для всього модального вікна */
-  #cartModal {
-    font-family: 'PT Sans Narrow', sans-serif;
-  }
-
-  /* Колір заголовку модалки */
-  .modal-title {
-    color: #C90E0E;
-  }
-
-  /* Колір для тексту і кнопок у модальному вікні */
-  .modal-body,
-  .modal-footer {
-    color: #333;
-  }
-
-  /* Кнопка закриття з новим кольором */
-  .btn-close {
-    background-color: #C90E0E;
-  }
-
-  /* Кнопка "Оформити замовлення" */
-  .btn-success {
-    background-color: #C90E0E;
-    border-color: #C90E0E;
-  }
-
-  .btn-success:hover {
-    background-color: #A60707;
-    border-color: #A60707;
-  }
 

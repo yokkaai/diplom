@@ -225,3 +225,22 @@ color: #fff;
 .form-check-label{
     color: #fff;
 }
+
+
+ /* Стилі для зірочок */
+ .stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Між зірочками */
+    font-size: 2rem; /* Зробіть розмір відносним */
+  }
+  
+  .star {
+    cursor: pointer;
+    color: #d3d3d3; /* Колір для неактивних зірочок */
+    transition: color 0.3s ease;
+  }
+  
+  .star.active {
+    color: #ff9900; /* Колір для активних зірочок */
+  }

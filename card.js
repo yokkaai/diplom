@@ -97,3 +97,57 @@ function loadCartFromLocalStorage() {
   updateCartCount(); // Оновлюємо кількість товарів на значку кошика
   updateCartModal(); // Оновлюємо контент в модальному вікні
 }
+
+
+
+// повідомлення про успішний +товар
+
+function showSuccessMessage() {
+  // Отримуємо елемент для повідомлення
+  var successMessage = document.getElementById("successMessage");
+  
+  // Показуємо повідомлення
+  successMessage.style.display = "block";
+  
+  // Приховуємо повідомлення через 3 секунди
+  setTimeout(function() {
+    successMessage.style.display = "none";
+  }, 3000);
+}
+
+// Зміна поля доставки в залежності від вибору
+document.getElementById('deliveryChoice').addEventListener('change', function () {
+  if (this.value === 'novaPoshta') {
+      document.getElementById('novaPoshtaFields').style.display = 'block';
+      document.getElementById('ukrPostFields').style.display = 'none';
+  } else if (this.value === 'ukrPost') {
+      document.getElementById('novaPoshtaFields').style.display = 'none';
+      document.getElementById('ukrPostFields').style.display = 'block';
+  } else {
+      document.getElementById('novaPoshtaFields').style.display = 'none';
+      document.getElementById('ukrPostFields').style.display = 'none';
+  }
+});
+
+// Обробка підтвердження замовлення
+document.getElementById('confirmOrderButton').addEventListener('click', function () {
+  var paymentChoice = document.querySelector('input[name="paymentChoice"]:checked').value;
+  if (paymentChoice === 'payNow') {
+      // Показати модальне вікно успішної оплати
+      var paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+      paymentModal.show();
+  } else if (paymentChoice === 'payUponReceiving') {
+      // Показати модальне вікно підтвердження при отриманні
+      var paymentUponReceivingModal = new bootstrap.Modal(document.getElementById('paymentUponReceivingModal'));
+      paymentUponReceivingModal.show();
+  }
+});
+
+// Перехід на головну сторінку
+document.getElementById('goToHomePageButton').addEventListener('click', function () {
+  window.location.href = 'golovna.html';
+});
+
+document.getElementById('goToHomePageUponReceivingButton').addEventListener('click', function () {
+  window.location.href = 'golovna.html';
+});
